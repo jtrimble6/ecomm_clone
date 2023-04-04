@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/admin_ecomm
+web: vendor/bin/heroku-php-apache2 build/
