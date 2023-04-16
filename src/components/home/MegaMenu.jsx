@@ -46,42 +46,10 @@ class MegaMenu extends Component {
                     <div className="panel">
                         <ul>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
                             </li>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button className="accordion">
-                        <img className="accordionMenuIcon" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" />
-                        &nbsp;
-                        Men's Clothing
-                    </button>
-                    <div className="panel">
-                        <ul>
-                            <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
-                            </li>
-                            <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button className="accordion">
-                        <img className="accordionMenuIcon" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" />
-                        &nbsp;
-                        Men's Clothing
-                    </button>
-                    <div className="panel">
-                        <ul>
-                            <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
-                            </li>
-                            <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
                             </li>
                         </ul>
                     </div>
@@ -110,26 +78,10 @@ class MegaMenu extends Component {
                     <div className="panel">
                         <ul>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
                             </li>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button className="accordion">
-                        <img className="accordionMenuIcon" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" />
-                        &nbsp;
-                        Men's Clothing
-                    </button>
-                    <div className="panel">
-                        <ul>
-                            <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
-                            </li>
-                            <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
                             </li>
                         </ul>
                     </div>
@@ -142,10 +94,10 @@ class MegaMenu extends Component {
                     <div className="panel">
                         <ul>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
                             </li>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
                             </li>
                         </ul>
                     </div>
@@ -158,10 +110,58 @@ class MegaMenu extends Component {
                     <div className="panel">
                         <ul>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 1</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
                             </li>
                             <li>
-                                <a className=""accordionItem href="#">Men's Tshirt 2</a>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button className="accordion">
+                        <img className="accordionMenuIcon" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" />
+                        &nbsp;
+                        Men's Clothing
+                    </button>
+                    <div className="panel">
+                        <ul>
+                            <li>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
+                            </li>
+                            <li>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button className="accordion">
+                        <img className="accordionMenuIcon" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" />
+                        &nbsp;
+                        Men's Clothing
+                    </button>
+                    <div className="panel">
+                        <ul>
+                            <li>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
+                            </li>
+                            <li>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button className="accordion">
+                        <img className="accordionMenuIcon" src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" />
+                        &nbsp;
+                        Men's Clothing
+                    </button>
+                    <div className="panel">
+                        <ul>
+                            <li>
+                                <a className="accordionItem" href="#">Men's Tshirt 1</a>
+                            </li>
+                            <li>
+                                <a className="accordionItem" href="#">Men's Tshirt 2</a>
                             </li>
                         </ul>
                     </div>

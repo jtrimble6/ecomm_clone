@@ -18,7 +18,7 @@ class Cart extends Component {
                                 <Card.Body>
                                     <Row>
                                         <Col md={3} lg={3} sm={6} xs={6}>
-                                            <img className="cart-product-img" src={Product1} />
+                                            <img className="cart-product-img" src={Product1} alt="test"/>
                                         </Col>
 
                                         <Col md={6} lg={6} sm={6} xs={6}>
@@ -42,7 +42,7 @@ class Cart extends Component {
                                 <Card.Body>
                                     <Row>
                                         <Col md={3} lg={3} sm={6} xs={6}>
-                                            <img className="cart-product-img" src={Product1} />
+                                            <img className="cart-product-img" src={Product1} alt="test"/>
                                         </Col>
 
                                         <Col md={6} lg={6} sm={6} xs={6}>
@@ -66,7 +66,7 @@ class Cart extends Component {
                                 <Card.Body>
                                     <Row>
                                         <Col md={3} lg={3} sm={6} xs={6}>
-                                            <img className="cart-product-img" src={Product1} />
+                                            <img className="cart-product-img" src={Product1} alt="test"/>
                                         </Col>
 
                                         <Col md={6} lg={6} sm={6} xs={6}>
@@ -90,7 +90,7 @@ class Cart extends Component {
                                 <Card.Body>
                                     <Row>
                                         <Col md={3} lg={3} sm={6} xs={6}>
-                                            <img className="cart-product-img" src={Product1} />
+                                            <img className="cart-product-img" src={Product1} alt="test"/>
                                         </Col>
 
                                         <Col md={6} lg={6} sm={6} xs={6}>

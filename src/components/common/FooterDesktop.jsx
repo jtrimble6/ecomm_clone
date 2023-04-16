@@ -19,14 +19,14 @@ class FooterDesktop extends Component {
                                     Email: support@easylearningbd.com
                                 </p>
                                 <h5 className="footer-menu-title">SOCIAL LINK</h5>
-                                <a href=""><i className="fab m-1 h4 fa-facebook"></i></a>
-                                <a href=""><i className="fab m-1 h4 fa-instagram"></i></a>
-                                <a href=""><i className="fab m-1 h4 fa-twitter"></i></a>
+                                <a href="/"><i className="fab m-1 h4 fa-facebook"></i></a>
+                                <a href="/"><i className="fab m-1 h4 fa-instagram"></i></a>
+                                <a href="/"><i className="fab m-1 h4 fa-twitter"></i></a>
                             </Col>
 
                             <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                                 <h5 className="footer-menu-title">THE COMPANY</h5>
-                                <Link to="/" className="footer-link">About Us</Link>
+                                <Link to="/about" className="footer-link">About Us</Link>
                                 <br />
                                 <Link to="/" className="footer-link">Company Profile</Link>
                                 <br />
@@ -46,8 +46,8 @@ class FooterDesktop extends Component {
 
                             <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                                 <h5 className="footer-menu-title">DOWNLOAD APPS</h5>
-                                <a><img src={Google} /></a> <br />
-                                <a><img className="mt-2" src={Apple} /></a> <br />
+                                <a><img src={Google} alt="google"/></a> <br />
+                                <a><img className="mt-2" src={Apple} alt="apple"/></a> <br />
                                 Change Your Language <br />
                                 <div id="google_translate_element">
 
