@@ -49,7 +49,7 @@ const About = () => {
         //     });
         //     console.log(response);
 
-            const response = await axios.get(AppURL.AllSiteInfo)
+            const response = await axios.get(AppURL.TestUrl)
             console.log(response)
     }
 
