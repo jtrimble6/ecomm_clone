@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import validation from '../../validation/validation'
 import axios from "axios"
-import AppURL from '../../api/AppURL'
+import AppUrl from '../../api/AppUrl'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -61,7 +61,7 @@ class Contact extends Component {
             myFormData.append("email", email)
             myFormData.append("message", message)
 
-            axios.post(AppURL.PostContact, myFormData)
+            axios.post(AppUrl.PostContact, myFormData)
                 .then(function(response) {
                     if (response.status === 200 && response.data === 1) {
                         toast.success("Message sent.")

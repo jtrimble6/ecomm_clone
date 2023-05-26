@@ -1,23 +1,106 @@
 import React, { Component, Fragment } from 'react'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+// import AppUrl from '../../api/AppUrl'
+// import axios from 'axios'
+import ReactHtmlParser from 'react-html-parser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Link } from "react-router-dom"
 
 class Privacy extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            privacy: ""
+        }
+    }
+
+    componentDidMount() {
+        let siteInfoPrivacy = sessionStorage.getItem("siteInfoPrivacy")
+
+        if (siteInfoPrivacy === null) {
+            toast.error("Something went wrong.", {
+                position: "bottom-center"
+            })
+        } // end if condition
+
+        else {
+            this.setState({
+                privacy: siteInfoPrivacy,
+                loaderDiv: "d-none",
+                mainDiv: ""
+            })
+        }
+        
+    }        
+
     render() {
         return (
             <Fragment>
                 <Container>
+
+                    <div className="breadbody">
+                        <Breadcrumb>
+                            <Breadcrumb.Item>
+                                <Link to="/">Home</Link>
+                            </Breadcrumb.Item>
+                            <Breadcrumb.Item>
+                                <Link to="/privacy">Privacy</Link>
+                            </Breadcrumb.Item>
+                        </Breadcrumb>
+                    </div>
+
                     <Row className="p-2">
                         <Col className="shadow-sm bg-white mt-2" lg={12} md={12} sm={12} xs={12}>
-                            <h4 className="section-title-login">Privacy Page</h4>
-                            <p className="section-title-contact">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies sodales arcu, ac tempor magna lobortis a. Curabitur bibendum ex in metus aliquam vulputate. Aenean maximus nibh sit amet purus pellentesque interdum. Etiam cursus facilisis arcu, sed finibus turpis cursus a. In velit libero, sagittis placerat nulla a, pellentesque mollis massa. Aliquam at finibus ligula. Nunc posuere turpis non libero cursus tempor. Aliquam sed elit eu sem venenatis dignissim. Mauris vel odio turpis. Quisque ligula velit, dapibus sit amet purus a, accumsan rhoncus eros. Nulla interdum metus eu lectus consequat, dignissim imperdiet lacus pharetra. Sed vel congue ex. Donec molestie ultricies pretium. Ut vestibulum, velit vel congue tempus, metus augue volutpat nulla, varius condimentum justo nulla ut turpis.
-                            <br />
-                            <br />
-                                Aenean eu iaculis lorem. Quisque vel consectetur velit. Proin et iaculis odio, in laoreet nunc. Morbi malesuada purus quis arcu condimentum, nec efficitur erat placerat. Vivamus eget elit urna. Praesent rhoncus porta lacus, quis feugiat mi finibus ut. Sed vitae sem at ligula suscipit varius. Curabitur arcu tortor, placerat rhoncus quam eu, posuere tristique lorem.
-                            </p>
+                            
+                            {/* LOADER DIV */}
+                            <div className={this.state.loaderDiv}>
+                                <div class="ph-item">
+                                    <div class="ph-col-12">
+                                        <div class="ph-row">
+                                            <div class="ph-col-4"></div>
+                                            <div class="ph-col-8 empty"></div>
+                                            <div class="ph-col-6"></div>
+                                            <div class="ph-col-6 empty"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={this.state.loaderDiv}>
+                                <div class="ph-item">
+                                    <div class="ph-col-12">
+                                        <div class="ph-row">
+                                            <div class="ph-col-4"></div>
+                                            <div class="ph-col-8 empty"></div>
+                                            <div class="ph-col-6"></div>
+                                            <div class="ph-col-6 empty"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* MAIN DIV */}
+                            <div className={this.state.mainDiv}>
+                                <h4 className="section-title-login">Privacy Page</h4>
+                                <p className="section-title-contact">
+                                    { ReactHtmlParser(this.state.privacy) }
+                                </p>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
+                <ToastContainer />
             </Fragment>
         )
     }

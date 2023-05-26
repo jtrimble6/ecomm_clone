@@ -12,16 +12,23 @@ class UserLoginPage extends Component {
     }
 
     render() {
+
+        const setUser = this.props.setUser
+        const user = this.props.user
+
         return (
             <Fragment>
                 <div className="Desktop">
-                    <NavMenuDesktop />
+                    <NavMenuDesktop user={user} />
                 </div>
                 <div className="Mobile">
                     <NavMenuMobile />
                 </div>
 
-                <UserLogin />
+                <UserLogin 
+                    user={user} 
+                    setUser={setUser}
+                />
                 
                 <div className="Desktop">
                     <FooterDesktop />

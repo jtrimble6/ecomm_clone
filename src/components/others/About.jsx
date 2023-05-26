@@ -1,93 +1,94 @@
 import React, { Component, Fragment } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import AppURL from '../../api/AppURL'
-import axios from 'axios'
+import { Container, Row, Col } from 'react-bootstrap'
+// import AppUrl from '../../api/AppUrl'
+// import axios from 'axios'
+import ReactHtmlParser from 'react-html-parser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Link } from "react-router-dom"
 
-const About = () => {
+class About extends Component {
+    constructor() {
+        super()
 
-    // constructor() {
-    //     super()
-
-    //     this.state = {
-    //         about: ""
-    //     }
-    // }
-
-    // componentDidMount() {
-    //     // axios
-    //     //     .post(AppURL.TestUrl, "test")
-    //     //     .then((res) => {
-    //     //         console.log(res);
-    //     //         console.log(res.data);
-    //     // });
-
-    //     // axios.get(AppURL.AllSiteInfo).then(res => {
-    //     //     let statusCode = res.status
-
-    //     //     if (statusCode === 200) {
-    //     //         let jsonData = (res.data)[0]['about']
-    //     //         console.log(jsonData)
-    //     //         // this.setState({
-    //     //         //     about: jsonData
-    //     //         // })
-    //     //     }
-
-    //     // }).catch(err => {
-    //     //     console.log(err)
-    //     // })
-    // }
-
-    async function fetchAbout(e) {
-        console.log(e)
-        e.preventDefault()
-        // const response = await fetch(`${api_Url}/products${param}`, {
-        //     method: 'DELETE',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Authorization': `bearer ${token}`
-        //     },
-        //     });
-        //     console.log(response);
-
-            const response = await axios.get(AppURL.TestUrl)
-            console.log(response)
+        this.state = {
+            about: "",
+            loaderDiv: "",
+            mainDiv: "d-none"
+        }
     }
 
-    // fetchAbout = (e) => {
-    //     e.preventDefault()
-    //     axios.get(AppURL.AllSiteInfo).then(res => {
-    //         let statusCode = res.status
-    //         console.log(statusCode)
-    //         if (statusCode === 200) {
-    //             let jsonData = (res.data)[0]['about']
-    //             console.log(jsonData)
-    //             // this.setState({
-    //             //     about: jsonData
-    //             // })
-    //         }
+    componentDidMount() {
+        let siteInfoAbout = sessionStorage.getItem("siteInfoAbout")
 
-    //     }).catch(err => {
-    //         console.log(err)
-    //     })
-    // }
+        if (siteInfoAbout === null) {
+            toast.error("Something went wrong.", {
+                position: "bottom-center"
+            })
+        } // end if condition
 
-    // render() {
+        else {
+            this.setState({
+                about: siteInfoAbout,
+                loaderDiv: "d-none",
+                mainDiv: ""
+            })
+        }
+        
+    }
+
+    render() {
         return (
             <Fragment>
                 <Container>
+                    <div className="breadbody">
+                        <Breadcrumb>
+                            <Breadcrumb.Item>
+                                <Link to="/">Home</Link>
+                            </Breadcrumb.Item>
+                            <Breadcrumb.Item>
+                                <Link to="/about">About</Link>
+                            </Breadcrumb.Item>
+                        </Breadcrumb>
+                    </div>
+
                     <Row className="p-2">
                         <Col className="shadow-sm bg-white mt-2" lg={12} md={12} sm={12} xs={12}>
-                            <Button onClick={(e) => fetchAbout(e)}>Fetch Page</Button>
-                            <h4 className="section-title-login">About Page</h4>
-                            <p className="section-title-contact">
-                                {/* {this.state.about} */}
-                            </p>
+                            
+                            {/* LOADER DIV */}
+                            <div className={this.state.loaderDiv}>
+                                <div class="ph-item">
+                                    <div class="ph-col-12">
+                                        <div class="ph-row">
+                                            <div class="ph-col-4"></div>
+                                            <div class="ph-col-8 empty"></div>
+                                            <div class="ph-col-6"></div>
+                                            <div class="ph-col-6 empty"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                            <div class="ph-col-12"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* MAIN DIV */}
+                            <div className={this.state.mainDiv}>
+                                <h4 className="section-title-login">About Page</h4>
+                                <p className="section-title-contact">
+                                    { ReactHtmlParser(this.state.about) }
+                                </p>
+                            </div>
+
                         </Col>
                     </Row>
                 </Container>
+                <ToastContainer />
             </Fragment>
         )
     }
-// }
+}
 
 export default About

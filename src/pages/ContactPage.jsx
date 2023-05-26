@@ -12,10 +12,11 @@ class ContactPage extends Component {
     }
     
     render() {
+        const user = this.props.user
         return (
             <Fragment>
                 <div className="Desktop">
-                    <NavMenuDesktop />
+                    <NavMenuDesktop user={user} />
                 </div>
                 <div className="Mobile">
                     <NavMenuMobile />

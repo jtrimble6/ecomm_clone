@@ -11,16 +11,19 @@ class CartPage extends Component {
     }
     
     render() {
+        const user = this.props.user
         return (
             <Fragment>
                 <div className="Desktop">
-                    <NavMenuDesktop />
+                    <NavMenuDesktop user={user} />
                 </div>
                 <div className="Mobile">
                     <NavMenuMobile />
                 </div>
 
-                <Cart />
+                <Cart 
+                    user={user}
+                />
                 
                 <div className="Desktop">
                     <FooterDesktop />
