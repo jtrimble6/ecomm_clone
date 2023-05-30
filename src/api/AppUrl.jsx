@@ -1,7 +1,7 @@
 
 
 class AppUrl {
-    static BaseURL = "http://" + process.env.DB_HOST + ":" + process.env.DB_PORT + "/api"
+    static BaseURL = "http://" + process.env.DB_HOST + "/api"
     static VisitorDetails = this.BaseURL + "/getvisitor"
     static PostContact = this.BaseURL + "/postcontact"
     static AllSiteInfo = this.BaseURL + "/allsiteinfo"
