@@ -1,7 +1,7 @@
 
 
 class AppUrl {
-    static BaseURL = "https://" + process.env.DB_HOST + "/api"
+    static BaseURL = "https://ecommerce2.herokuapp.com/api"
     static VisitorDetails = this.BaseURL + "/getvisitor"
     static PostContact = this.BaseURL + "/postcontact"
     static AllSiteInfo = this.BaseURL + "/allsiteinfo"
