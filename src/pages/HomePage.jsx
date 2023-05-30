@@ -40,6 +40,7 @@ class HomePage extends Component {
         let allSiteInfo = sessionStorage.getItem("allSiteInfo")       
         
         if (allSiteInfo === null) {
+            console.log('this is the url: ', AppUrl.AllSiteInfo)
             axios.get(AppUrl.AllSiteInfo).then(res => {
                 let statusCode = res.status
     
